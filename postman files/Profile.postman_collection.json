@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "61ce4e4f-2d75-487e-8a26-3fa8d5ff0f4e",
+		"name": "Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create and Update Users Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Content Type",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5Yzc1Y2Y4ZTcwODlmMWI0MWYzZWQzIn0sImlhdCI6MTYzNzkxMzQ1MCwiZXhwIjoxNjM4MjczNDUwfQ.Zu36zAC4MgDuWJ5tGkqPkhmP4KTR-Jyb4nT-ZrUYmLQ",
+						"description": "AJ Token",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkN2UzM2MzNTNiNGNlZjRkNzNmNTNmIn0sImlhdCI6MTY0MTUzODM2NSwiZXhwIjoxNjQxODk4MzY1fQ.5P8ABpQ4fG_1tSSmO1ijY5DbxS0-St92EGjRqMh8IFo",
+						"description": "Tuter Token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"company\": \"Test Software\",\r\n    \"website\": \"https://www.123software.com\",\r\n    \"status\": \"Developer\",\r\n    \"skills\": \"HTML, CSS, JS\",\r\n    \"location\": \"Puerto Princesa City\",\r\n    \"bio\": \"I'm a full stack developer\",\r\n    \"githubusername\": \"tuterman\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5Yzc1Y2Y4ZTcwODlmMWI0MWYzZWQzIn0sImlhdCI6MTYzNzcyOTA2NCwiZXhwIjoxNjM4MDg5MDY0fQ.z6mFQvFrOnIBWIIytr3No-_fjx4RxEt1ZsMPgnCvKvo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5Yzc1Y2Y4ZTcwODlmMWI0MWYzZWQzIn0sImlhdCI6MTYzNzkxMTM5MCwiZXhwIjoxNjM4MjcxMzkwfQ.jUu2kaH-XJ7Bug63rMeMaS3ybyLsL1lptqThubekil0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile by User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/61a0939129285943fb90c287",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"61a0939129285943fb90c287"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile & User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkN2UzM2MzNTNiNGNlZjRkNzNmNTNmIn0sImlhdCI6MTY0MTUzODM2NSwiZXhwIjoxNjQxODk4MzY1fQ.5P8ABpQ4fG_1tSSmO1ijY5DbxS0-St92EGjRqMh8IFo",
+						"description": "Tuter TOken",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Experience",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5ZGMzOTFiYmEyMWQxY2ZlZmRkNzk2In0sImlhdCI6MTY0MTU0MzM0OCwiZXhwIjoxNjQxOTAzMzQ4fQ.cJuPxgjYpHJJVpBh5oJAcgnlga2kuGj2B6Irvi4BhHg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"On the Job Trainee\",\r\n    \"company\": \"onClick Tech\",\r\n    \"location\": \"Bonifacio Global City\",\r\n    \"from\": \"12-14-2013\",\r\n    \"to\": \"2-13-2014\",\r\n    \"description\" : \"On the Job Training\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile Experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5ZGMzOTFiYmEyMWQxY2ZlZmRkNzk2In0sImlhdCI6MTY0MTU0MzM0OCwiZXhwIjoxNjQxOTAzMzQ4fQ.cJuPxgjYpHJJVpBh5oJAcgnlga2kuGj2B6Irvi4BhHg",
+						"description": "Athaleng Token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/61d80007b58bf82963b36c99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"61d80007b58bf82963b36c99"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
