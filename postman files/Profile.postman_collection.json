@@ -205,6 +205,42 @@
 			"response": []
 		},
 		{
+			"name": "Add Education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5ZGMzOTFiYmEyMWQxY2ZlZmRkNzk2In0sImlhdCI6MTY0MTU0MzM0OCwiZXhwIjoxNjQxOTAzMzQ4fQ.cJuPxgjYpHJJVpBh5oJAcgnlga2kuGj2B6Irvi4BhHg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"school\": \"Test School\",\r\n    \"degree\": \"Associate Degree\",\r\n    \"fieldofstudy\": \"Major in Mobile Legend (ML)\",\r\n    \"from\": \"6-01-2010\",\r\n    \"to\": \"4-09-2012\",\r\n    \"description\" : \"Got Associate in Mobile Legend\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Delete Profile Experience",
 			"request": {
 				"method": "DELETE",
@@ -234,6 +270,41 @@
 						"profile",
 						"experience",
 						"61d80007b58bf82963b36c99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile Education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE5ZGMzOTFiYmEyMWQxY2ZlZmRkNzk2In0sImlhdCI6MTY0MTU0MzM0OCwiZXhwIjoxNjQxOTAzMzQ4fQ.cJuPxgjYpHJJVpBh5oJAcgnlga2kuGj2B6Irvi4BhHg",
+						"description": "Athaleng Token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/61dd2df743a72e9372bafe95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"61dd2df743a72e9372bafe95"
 					]
 				}
 			},

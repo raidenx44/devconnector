@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8ce603ff-7bca-45c3-9be8-a21460245b1d",
+		"_postman_id": "20934502-0f35-4335-ab67-15cb0d1eb307",
 		"name": "Users & Auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Athaleng Racelis\",\r\n    \"email\": \"athaleng@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+					"raw": "{\r\n    \"name\": \"Tuter Racelis\",\r\n    \"email\": \"tuter@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5000/api/users",
